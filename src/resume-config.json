@@ -1,26 +1,26 @@
 {
-  "name": "Jane Doe",
-  "profession": "Senior Solutions Architect",
+  "name": "Carlos Asmad Lizana",
+  "profession": "Data Analytics & Business Intelligence",
   "summary": "Results-driven professional with 8+ years of experience in designing scalable architectures and leading cross-functional teams. Proven track record of improving system efficiency and driving product-led growth. Adept at bridging the gap between technical execution and business strategy",
-  "email": "jane.doe@example.com",
-  "phone": "+1-555-123-4567",
+  "email": "ca.asmad@gmail.com",
+  "phone": "+51-936-304-132",
   "location": {
-    "city": "San Francisco",
-    "state": "CA",
-    "country": "USA",
-    "postalCode": "94105"
+    "city": "Lima",
+    "state": "LIM",
+    "country": "Perú",
+    "postalCode": "----"
   },
   "website": "https://janedoe.dev",
   "socials": [
     {
       "platform": "linkedin",
-      "username": "janedoe",
-      "url": "https://linkedin.com/in/janedoe"
+      "username": "carlos-alberto-asmad-lizana",
+      "url": "https://www.linkedin.com/in/carlos-alberto-asmad-lizana/"
     },
     {
       "platform": "github",
-      "username": "jd123",
-      "url": "https://github.com/jd123"
+      "username": "CarlosLizana",
+      "url": "https://github.com/CarlosLizana"
     },
     {
       "platform": "twitter",

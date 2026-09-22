@@ -14,13 +14,13 @@
     "subHeadingItems": [
       {
         "type": "mail",
-        "label": "jane.doe@example.com",
-        "url": "mailto:john.doe@example.com"
+        "label": "ca.asmad@gmail.com",
+        "url": "mailto:ca.asmad@gmail.com"
       },
       {
         "type": "address",
-        "label": "San Francisco, CA",
-        "url": "https://www.google.com/maps/place/San+Francisco"
+        "label": "Lima, PE",
+        "url": "https://www.google.com/maps/place/Lima"
       }
     ],
     "socialItems": [
