@@ -45,5 +45,5 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
 
-  site: "https://CarlosLizana.github.io",
+  site: "https://carloslizana.github.io",
 });
