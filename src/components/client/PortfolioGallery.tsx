@@ -8,20 +8,49 @@ interface GalleryImage {
   alt: string;
 }
 
-type GalleryItem = { type: "image"; src: string; alt: string } | { type: "video"; videoId: string; alt: string };
+type GalleryItem =
+  | { type: "image"; src: string; alt: string }
+  | { type: "video"; videoId: string; alt: string }
+  | { type: "powerbi"; url: string; alt: string };
 
-export default function PortfolioGallery({ images, videoId, title }: { images: GalleryImage[]; videoId?: string | null; title?: string }) {
+export default function PortfolioGallery({
+  images,
+  videoId,
+  powerBiUrl,
+  title
+}: {
+  images: GalleryImage[];
+  videoId?: string | null;
+  powerBiUrl?: string | null;
+  title?: string;
+}){
   const [currentIndex, setCurrentIndex] = useState(0);
   const thumbRef = useRef<HTMLDivElement>(null);
 
   const items = useMemo<GalleryItem[]>(() => {
     const result: GalleryItem[] = [];
-    if (videoId) {
-      result.push({ type: "video", videoId, alt: title ? `${title} demo video` : "Demo video" });
+    if (powerBiUrl) {
+      result.push({
+        type: "powerbi",
+        url: powerBiUrl,
+        alt: title ? `${title} Power BI report` : "Power BI report"
+      });
     }
-    images.forEach((img) => result.push({ type: "image", ...img }));
+    if (videoId) {
+      result.push({
+        type: "video",
+        videoId,
+        alt: title ? `${title} demo video` : "Demo video"
+      });
+    }
+    images.forEach((img) => {
+      result.push({
+        type: "image",
+        ...img
+      });
+    });
     return result;
-  }, [images, videoId, title]);
+  }, [images, videoId, powerBiUrl, title]);
 
   const goNext = useCallback(() => {
     if (items.length === 0) return;
@@ -76,7 +105,33 @@ export default function PortfolioGallery({ images, videoId, title }: { images: G
 
   return (
     <div onWheel={handleWheel} className="select-none">
-      <div className="aspect-video border border-border overflow-hidden bg-muted">{current.type === "image" ? <img src={current.src} alt={current.alt} className="w-full h-full object-contain" /> : <iframe src={`https://www.youtube.com/embed/${current.videoId}`} title={current.alt} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />}</div>
+      <div className="aspect-video border border-border overflow-hidden bg-muted">
+               
+        {current.type === "image" ? (
+        <img
+          src={current.src}
+          alt={current.alt}
+          className="w-full h-full object-contain"
+        />
+        ) : current.type === "powerbi" ? (
+        <iframe
+          src={current.url}
+          title={current.alt}
+          frameBorder="0"
+          allowFullScreen
+          className="w-full h-full"
+        />
+        ) : (
+        <iframe
+          src={`https://www.youtube.com/embed/${current.videoId}`}
+          title={current.alt}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+        )}        
+        </div>
 
       {items.length > 1 && (
         <div className="flex justify-center items-center gap-3 mt-8">
@@ -94,13 +149,35 @@ export default function PortfolioGallery({ images, videoId, title }: { images: G
                 }}
                 className={`shrink-0 size-14 cursor-pointer overflow-hidden animation relative ${index === currentIndex ? "border-3 border-secondary-foreground/80" : "border border-border hover:border-secondary-foreground/50"}`}
               >
+
                 {item.type === "image" ? (
-                  <img loading="lazy" width={1920} src={item.src} alt={item.alt} className="w-full h-full object-cover" />
+                  <img
+                    loading="lazy"
+                    width={1920}
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover"
+                  />
+                ) : item.type === "powerbi" ? (
+                  <div className="w-full h-full flex items-center justify-center bg-muted text-muted-foreground">
+                    <span className="text-xs font-medium tracking-widest">
+                      POWER BI
+                    </span>
+                  </div>
                 ) : (
                   <>
-                    <img loading="lazy" width={1920} src={`https://img.youtube.com/vi/${item.videoId}/default.jpg`} alt={item.alt} className="w-full h-full object-cover" />
+                    <img
+                      loading="lazy"
+                      width={1920}
+                      src={`https://img.youtube.com/vi/${item.videoId}/default.jpg`}
+                      alt={item.alt}
+                      className="w-full h-full object-cover"
+                    />
+
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                      <span className="text-foreground text-xl leading-none">▶</span>
+                      <span className="text-foreground text-xl leading-none">
+                        ▶
+                      </span>
                     </div>
                   </>
                 )}

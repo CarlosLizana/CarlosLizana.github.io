@@ -35,10 +35,12 @@ export interface portfolioConfig {
     title: string;
     description: string;
     tags: string[];
+    status: string;
   };
   introduction: string;
   links: { label: string; url: string }[];
   video: string | null;
+  powerBiUrl?: string | null;
   brief: { capabilities: string[]; architecture: string[] };
 }
 

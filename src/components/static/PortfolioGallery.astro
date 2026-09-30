@@ -10,6 +10,12 @@ export interface Props {
 
 const { item, images } = Astro.props;
 const videoId = item.video ? extractYouTubeId(item.video) : null;
+const powerBiUrl = item.powerBiUrl ?? null;
+
+console.log("PROYECTO:", item.id);
+console.log("VIDEO:", item.video);
+console.log("VIDEO ID:", videoId);
+console.log("POWER BI:", item.powerBiUrl);
 
 function extractYouTubeId(url: string): string | null {
     if (!url) return null;
@@ -25,5 +31,5 @@ const galleryImages = images.map((img, i) => ({
 ---
 
 <div class="border border-border p-6">
-    {(images.length > 0 || videoId) && <PortfolioGallery images={galleryImages} videoId={videoId} title={item.data.title} client:load />}
+    {(images.length > 0 || videoId) && <PortfolioGallery images={galleryImages} videoId={videoId} powerBiUrl={powerBiUrl} title={item.data.title} client:load />}
 </div>
