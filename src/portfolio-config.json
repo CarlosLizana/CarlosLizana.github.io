@@ -97,13 +97,27 @@
       ],
       "status": "completed"
     },
-    "introduction": ["Business Intelligence dashboard developed using fictitious and anonymized data to monitor the performance of a sales force in the pharmaceutical channel, integrating sales, visits, quota fulfillment, and POP material deployment.", "Business Challenge: Field operations require simultaneous monitoring of: Sales + Visits + Coverage + POS Execution + Productivity When these metrics are tracked separately, it becomes more difficult to quickly identify: - Which employees are meeting their quotas? - Where are there gaps in coverage? - Which employees generate the highest sales volume? - Which POS locations are being visited? The dashboard aims to consolidate these variables into a single executive and operational view. Main Objective: Develop an interactive dashboard in Power BI that enables monitoring of sales performance and point-of-sale execution, facilitating analysis by period, city, employee, and type of activity."],
+    "introduction": "Report Farma is a Business Intelligence dashboard developed using fictitious and anonymized data to monitor the performance of a sales force in the pharmaceutical channel. The solution integrates sales performance, visits, quota fulfillment, coverage, productivity, and point-of-sale execution into a single interactive analytical view.",
     "links": [],
     "video": null,
     "powerBiUrl": "https://app.powerbi.com/view?r=eyJrIjoiYmI3MGNhOGMtN2FhYy00MTc2LTkyMzktM2FiNjdkOWQwYjEzIiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
     "brief": {
-      "capabilities": [],
-      "architecture": []
-    }
+    "capabilities": [
+      "Sales performance monitoring by employee, period, city, and product.",
+      "Visit tracking and quota fulfillment analysis.",
+      "Point-of-sale coverage and sales conversion monitoring.",
+      "Employee performance ranking based on sales and operational KPIs.",
+      "POP material deployment monitoring and quota fulfillment.",
+      "Interactive filtering by date, city, employee, and activity type."
+    ],
+
+    "architecture": [
+      "Data preparation and transformation using Power Query.",
+      "Analytical data modeling designed to connect sales, visits, employees, points of sale, products, and operational activity.",
+      "DAX measures used to calculate sales, visits, quotas, fulfillment rates, productivity, and execution KPIs.",
+      "Power BI semantic model used as the analytical layer for interactive reporting.",
+      "Interactive dashboard layer designed for both executive monitoring and operational analysis."
+    ]
+  }
   }
 ]
