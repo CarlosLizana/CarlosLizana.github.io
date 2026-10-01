@@ -1,9 +1,9 @@
 {
   "github": { "owner": "A58361", "repo": "ryze" },
-  "domain": "https://ryze.pages.dev",
+  "domain": null,
   "bNavigation": true,
   "homeLabel": "home",
-  "navigationItems": ["portfolio", "blog"],
+  "navigationItems": ["portfolio", ""],
   "bPageFind": true,
   "bThemeToggle": true,
   "bRssFeed": true,
@@ -24,13 +24,13 @@
       }
     ],
     "socialItems": [
-      { "type": "linkedin", "url": "https://linkedin.com" },
-      { "type": "github", "url": "https://github.com" },
-      { "type": "twitter", "url": "https://twitter.com" }
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/carlos-alberto-asmad-lizana/" },
+      { "type": "github", "url": "https://github.com/CarlosLizana" },
+      { "type": "twitter", "url": null }
     ],
     "description": "This is my modern template for creating a personal portfolio, built with Astro 6, React 19, and Tailwind CSS 4. It includes a portfolio system, an RSS feed, site search, OG images, and much more.",
     "ctaItems": [{ "label": "Resume", "url": "/resume", "variant": "default" }],
-    "support": { "label": "Star on Github", "url": "https://github.com/A58361/Ryze", "variant": "outline" }
+    "support": { "label": "Star on Github", "url": null, "variant": "outline" }
   },
   "featured": {
     "portfolio": { "visible": true },
