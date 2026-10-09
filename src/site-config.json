@@ -28,7 +28,7 @@
       { "type": "github", "url": "https://github.com/CarlosLizana" },
       { "type": "twitter", "url": null }
     ],
-    "description": "This is my modern template for creating a personal portfolio, built with Astro 6, React 19, and Tailwind CSS 4. It includes a portfolio system, an RSS feed, site search, OG images, and much more.",
+    "description": "Welcome to my Power BI portfolio repository! Here you will find a collection of Power BI projects and dashboards that demonstrate my skills and expertise in data visualization, business intelligence, and analytics using Power BI",
     "ctaItems": [{ "label": "Resume", "url": "/resume", "variant": "default" }],
     "support": { "label": "Star on Github", "url": null, "variant": "outline" }
   },
