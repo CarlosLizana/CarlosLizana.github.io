@@ -28,7 +28,7 @@
       { "type": "github", "url": "https://github.com/CarlosLizana" },
       { "type": "twitter", "url": null }
     ],
-    "description": "Welcome to my Power BI portfolio repository! Here you will find a collection of Power BI projects and dashboards that demonstrate my skills and expertise in data visualization, business intelligence, and analytics using Power BI",
+    "description": "Welcome to my portfolio of projects as a data analyst and business analyst! Here you'll find a collection of projects and dashboards that showcase my skills and experience in data visualization, business intelligence, and analytics, using tools such as Excel, Power BI, SQL Server, MySQL, and Python.",
     "ctaItems": [{ "label": "Resume", "url": "/resume", "variant": "default" }],
     "support": { "label": "Star on Github", "url": null, "variant": "outline" }
   },
